@@ -1,0 +1,84 @@
+// Миксины ===========================================================================
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+$units: 1px !default;
+@mixin screen($res-first, $res-last: $res-first) {
+  @if $res-first == $res-last {
+    @media screen and (max-width: if(unitless($res-first), ($res-first - 1) *$units, $res-first)) {
+      @content;
+    }
+  } @else if $res-first < $res-last {
+    @media screen and (min-width: if(unitless($res-first), $res-first*$units, $res-first)) and (max-width: if(unitless($res-last), $res-last*$units, $res-last)) {
+      @content;
+    }
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: if(unitless($res), $res*$units, $res)) {
+    @content;
+  }
+}
+
+@mixin centered($axis: "both") {
+  position: absolute;
+  @if $axis == "both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $axis == "x" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $axis == "y" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// Переменные=========================================================================
+$mw: 1024px;
+$md1: 768px;
+$md2: 425px;
+// $md3: ;
+// $md4: ;
+
+// mixins популярных брекпоинтов =====================================================
+@mixin desktop {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $mw) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $md1) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $md2) {
+    @content;
+  }
+}

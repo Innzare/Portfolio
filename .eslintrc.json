@@ -1,0 +1,37 @@
+{
+   "overrides": [
+      {
+         "files": [
+            "dev/static/**/*.js"
+         ],
+         "extends": [
+            "standard"
+         ],
+         "rules": {
+            "max-len": "off",
+            "spaced-comment": "off",
+            "linebreak-style": "off",
+            "object-curly-spacing": "off",
+            "indent": "off",
+            "require-jsdoc": "off",
+            "operator-linebreak": "off",
+            "quotes": "off",
+            "indent-legacy": "off",
+            "semi": "off",
+            "comma-dangle": "off",
+            "no-multiple-empty-lines": "off",
+            "no-mixed-operators": "off",
+            "space-before-function-paren": "off",
+            "padded-blocks": "off",
+            "no-undef": "off",
+            "prefer-const": "off",
+            "no-unused-expressions": "off",
+            "no-sequences": "off",
+            "no-unused-vars": "off",
+            "lines-between-class-members": "off",
+            "new-parens": "off",
+            "eol-last": "off"
+         }
+      }
+   ]
+}

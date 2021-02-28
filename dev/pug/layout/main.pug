@@ -1,0 +1,27 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+	body
+		include ../modules/header/header
+		.wrapper
+			block content
+		include ../modules/footer/footer
+		//script(src="static/js/vendor/jquery-3.3.1.min.js")
+		//script(src="static/js/vendor/libs.js")
+		<script src="https://use.fontawesome.com/69a6c2a5eb.js"></script>
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		script(src="./static/js/animate.js")
+		script(src="./static/js/main.js")

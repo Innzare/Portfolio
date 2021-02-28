@@ -1,0 +1,168 @@
+extends layout/main
+
+block variables
+	-var title = 'Portfolio'
+
+block content
+	header.header
+		nav.header_menu.menu
+			a(href="" class='menu__link') About
+			a(href="" class='menu__link') Skills
+			a(href="" class='menu__link') Portfolio
+			a(href="" class='menu__link') Contact
+	main.page
+		.page__wrapper
+			.page__screen.screen
+				.screen__content 
+					.screen__content-wrapper
+						h1(data-swiper-parallax="50%", data-swiper-parallax-opacity="0").screen__title.screen__title_bg.about-title Web-developer
+						.about-text <span class="my-name">Hello, i'm Shamil Maashev</span> I am engaged in site layout.  I actively practice programming and learn new technologies (React, Vue).  Mainly I worked in the front-end, now I am studying server development (Node, PHP), and working with databases.  At the moment I am looking for a job.
+						//- .about-contacts
+						//- 	p.phone
+						//- 		span.title Телефон
+						//- 		span.value +7(919)-606-17-25
+						//- 	p.email
+						//- 		span.title Email
+						//- 		span.value maashevshamil@gmail.com
+						//- .contact-btn
+						//- 	button Связаться
+				.screen__body
+					.screen__image.animate
+						//- img(src="./static/images/content/promo.jpg", data-swiper-parallax="50%", data-swiper-parallax-scale="1.1", alt="")
+
+			.page__screen.screen
+				.screen__content 
+					h1(data-swiper-parallax="50%", data-swiper-parallax-opacity="0").screen__title.screen__title_bg Skills
+					.skills-wrapper
+							.skills-left Technologies I have worked with
+							.skills-right 
+								.bar-wrapper
+									.bar.flex
+										.bar.fill(style='width:90%')
+											.tag.bold.flex HTML, PUG
+										span 90%
+									.bar.flex
+										.bar.fill(style='width:90%')
+											.tag.bold.flex CSS, SCSS
+										span 90%
+									.bar.flex
+										.bar.fill(style='width:50%')
+											.tag.bold.flex JavaScript, JQuery
+										span 50%
+									.bar.flex
+										.bar.fill(style='width:40%')
+											.tag.bold.flex Gulp, Webpack
+										span 40%
+									.bar.flex
+										.bar.fill(style='width:20%')
+											.tag.bold.flex Vue
+										span 20%
+									.bar.flex
+										.bar.fill(style='width:20%')
+											.tag.bold.flex React
+										span 20%
+									.bar.flex
+										.bar.fill(style='width:30%')
+											.tag.bold.flex PHP, MySQL
+										span 30%
+				.screen__body
+					.screen__image
+						img(src="./static/images/content/promo.jpg",data-swiper-parallax="50%", data-swiper-parallax-scale="1.1",alt="")
+
+			.page__screen.screen
+				.screen__content 
+					h1(data-swiper-parallax="50%", data-swiper-parallax-opacity="0").screen__title.screen__title_bg Portfolio
+					.portfolio-wrapper
+						//- .portfolio-filter All
+						.portfolio-slider
+							.portfolio-slide
+								.portfolio-items
+									.portfolio-item
+										img.portfolio-item_img(src="/static/images/content/1.png", alt="portfolio-img")
+										.portfolio-item__content 
+											.content__text 
+												p Сайт: MatrixIT 
+												p Стек: HTML, CSS, JQuery
+											.content__link
+												a(href="https://matrixit.ru/4/")
+													button Перейти 
+									.portfolio-item
+										img.portfolio-item_img(src="/static/images/content/2.png", alt="portfolio-img")
+										.portfolio-item__content 
+											.content__text 
+												p Сайт: Perfectodance
+												p Стек: HTML, CSS, JavaScript, Gulp
+											.content__link
+												a(href="https://perfectodance.ru/")
+													button Перейти 
+									.portfolio-item
+										img.portfolio-item_img(src="/static/images/content/3.png", alt="portfolio-img")
+										.portfolio-item__content
+											.content__text 
+												p Сайт: Ekoil 
+												p Стек: HTML, SCSS, JavaScript, JQuery, PHP, MySQL
+											.content__link
+												a(href="#")
+													button Перейти 
+									.portfolio-item
+										img.portfolio-item_img(src="/static/images/content/4.png", alt="portfolio-img")
+										.portfolio-item__content
+											.content__text 
+												p Сайт: Salt 
+												p Стек: Gulp, HTML, SCSS, JavaScript, JQuery
+											.content__link
+												a(href="https://innzare.github.io/Salt/Purrweb-html-тестовое/index.html")
+													button Перейти 
+									
+							.swiper-controll
+								.swiper-button-prev <
+								.swiper-pagination
+								.swiper-button-next >
+				.screen__body
+					.screen__image
+						img(src="./static/images/content/promo.jpg",data-swiper-parallax="50%", data-swiper-parallax-scale="1.1",alt="")
+
+			.page__screen.screen
+				.screen__content 
+					h1(data-swiper-parallax="50%", data-swiper-parallax-opacity="0").screen__title.screen__title_bg Contact
+					.contacts-wrapper
+						.form 
+							form
+								.user-box
+									input(type='text' name='' required='')
+									label Name
+								.user-box
+									input(type='password' name='' required='')
+									label Mail
+								.user-box
+									input(type='password' name='' required='')
+									label Message
+								a(href='#')
+									span
+									span
+									span
+									span
+									|       Send
+
+						.phone
+						.email 
+
+						ul.socialIcons
+							li
+								a.telegram(href='https://t.me/innzare')
+									i.fa.fa-telegram 
+							li
+								a.github(href='https://github.com/Innzare')
+									i.fa.fa-github
+							//- li
+							//- 	a.googlePlus(href='#')
+							//- 		i.fa.fa-google
+
+
+				.screen__body
+					.screen__image
+						img(src="./static/images/content/promo.jpg",data-swiper-parallax="50%", data-swiper-parallax-scale="1.1",alt="")
+		.page__pagination
+			.page__bullet.page__bullet_active
+		.page__scroll
+			.page__drag-scroll
